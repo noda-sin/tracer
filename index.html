@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Tracing Shapes Demo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    html,body {height:100%;margin:0;display:flex;justify-content:center;align-items:center;
+               background:#f8f8f8;font-family:sans-serif;}
+
+    svg       {touch-action:none;user-select:none;}
+
+    /* 図形のエッジ */
+    .edge     {stroke:#aaa;stroke-width:8;fill:none;stroke-linecap:round;transition:stroke .15s;}
+    .edge-hit {stroke:transparent;stroke-width:30;fill:none;pointer-events:stroke;}
+
+    /* クリア済みのエッジ */
+    .cleared  {stroke:#000;}
+
+    /* 指の軌跡 */
+    .trace    {stroke:#00b4ff;stroke-width:6;fill:none;stroke-linecap:round;stroke-linejoin:round;
+               stroke-opacity:.65;}
+
+    /* COMPLETE! 表示 */
+    #msg      {position:fixed;top:18px;left:50%;transform:translateX(-50%);
+               font-size:24px;font-weight:bold;color:#008a00;opacity:0;transition:.3s;}
+  </style>
+</head>
+<body>
+  <div id="msg">COMPLETE!</div>
+  <svg id="board" viewBox="0 0 300 300" width="340" height="340"></svg>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
